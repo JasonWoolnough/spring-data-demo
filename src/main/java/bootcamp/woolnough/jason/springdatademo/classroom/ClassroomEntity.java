@@ -13,6 +13,9 @@ public class ClassroomEntity {
     private String teacherName;
     private Collection<StudentEntity> students;
 
+    public ClassroomEntity() {
+    }
+
     @Id
     @Column(name = "ID")
     public Integer getId() {
@@ -50,5 +53,14 @@ public class ClassroomEntity {
 
     public void setStudents(Collection<StudentEntity> students) {
         this.students = students;
+    }
+
+    @Override
+    public String toString() {
+        return "ClassroomEntity{" +
+                "id=" + id +
+                ", grade=" + grade +
+                ", teacherName='" + teacherName + '\'' +
+                '}';
     }
 }
